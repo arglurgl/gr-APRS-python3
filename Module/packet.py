@@ -308,6 +308,6 @@ def dump(packet):
     for station in packet.digipeaters:
         ret += ',%s' % station
 
-    ret += ':%s' % packet.info
+    ret += ':%s' % packet.info.decode("utf-8")
 
     return ret
